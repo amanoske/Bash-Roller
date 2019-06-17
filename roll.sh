@@ -19,5 +19,5 @@ for (( i=1; i<=NUMTIMES; i++))
 do
 	roll=$((1+RANDOM % FACES))
     bonusRoll=$((roll+ADDBONUS))
-	echo "Rolled a d$FACES for $roll (with $ADDBONUS, $bonusRoll)"
+	echo "Rolled a d$FACES for $roll (with +$ADDBONUS, $bonusRoll)"
 done 
