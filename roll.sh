@@ -1,18 +1,19 @@
 #!/bin/bash
 #Dice Rolling Program
 
-while getopts f:n:b: option
+while getopts f:n:b:t: option
 do
 case "${option}"
 in
 f) FACES=${OPTARG};;
 n) NUMTIMES=${OPTARG};;
 b) ADDBONUS=${OPTARG};;
+t) TITLE=${OPTARG};;
 esac
 done
 
 echo "    /                     "
-echo "O===[====================- Rolling $NUMTIMES d$FACES..."
+echo "O===[====================- Rolling $TITLE : $NUMTIMES d$FACES..."
 echo "    \                     "
 
 for (( i=1; i<=NUMTIMES; i++))
